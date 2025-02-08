@@ -1,0 +1,76 @@
+RT @Bouchut_: TechTalks #9 : Augmentation du Block Gas Limit d’Ethereum ⛽
+
+Cette semaine marque un petit accomplissement pour le scaling d’… It would greatly increase my respect for @Apple if they publicly commit to withdrawing from the UK market if that's their only option to avoid compromising their encryption.
+
+I will commit to buying and using one additional apple device (I currently have airpods) if they do this. https://t.co/IjB9NntQyD RT @lawnwrangler17: Don't cancel yourself.
+Become uncancellable.
+Milady https://t.co/rXSHXjzYEC milady RT @NoahCitron: Hello wallet friends.
+
+Vitalik wants you to run light clients.
+
+My DMs are open. @NoahCitron and others working on helios are heroes.
+
+It's an indispensable part of the ethereum dream that you should be able to access the chain (read and write) without needing to trust centralized third parties.
+
+Looking forward to seeing wallets incorporate helios.
+
+Some future steps:
+
+* Helios provides security guarantees, we also need privacy guarantees. Short term, stick RPC server nodes inside TEEx (there are some RPCs that do this already). Longer term, FHE / PIR / mixnets / other egyptian god magic
+* Extend public mempools to non-EOAs, specifically smart wallets (eg. multisig, non-ECDSA signature algos for quantum resistance, updateable keys), and privacy protocols (eg. railway) that currently rely on public broadcasters
+* L1 statelessness (verkle or hash-based) to make RPC proofs more data efficient (along with the other benefits of statelessness) Milady RT @sejal_rekhan: Become a juror in Deep Funding's Level 2 voting process 📢
+
+We're inviting people to participate in our child node voting… The more I think about it, the more I think 2013-era morality is pretty much correct:
+
+* free speech good
+* starting companies and making good products good
+* monopolies bad, vendor lock-in bad
+* democracy good
+* greed bad
+* trying to achieve national security through oppressing people bad
+* cosmopolitan humanitarian values, caring about faraway people, etc good
+
+Things we've "learned" since then have been harmful more than helpful
+
+L1 is scaling.
+
+A big shoutout to all the developers working on EIP-4444 (history expiry), statelessness (see the new binary tree EIP! https://t.co/ajKpF66BKw ), client efficiency upgrades, and other features that will make higher L1 gas limits decentralization-friendly. Pectra, expected in March, will increase the blob target from 3 to 6, doubling the capacity of L2s.
+
+IMO we should make the blob target also staker-voted, so that it can increase in respose to technology improvements without waiting for hard forks. RT @tyneslol: @Ledger @safe Update: there is currently an effort to add 7702 support to both @Ledger and @Trezor. Should see some public co… Let's work hard to make sure 7702 (and later on even more powerful versions of AA, which don't require any "ECDSA master key" at all) is not just a blockchain feature but also a reality for users! RT @revrfg: reintroducing @commitwtf — an onchain accountability protocol
+
+your commitments should mean something and there should be a cos… RT @Junger0x: Introducing Ethproofs
+
+a) Why we need @eth_proofs?
+
+The endgame of Ethereum is crystal clear: anyone should be able to verify… RT @fileverse: Our first 2025 ddocs update💛
+Powered by ur feedback 👷‍♀️
+
+-Export/Print: get ur docs &amp; .md as well-formatted PDFs
+- dDocs &amp;…
+
+accelerate good things You can just do things. RT @lightclients: The go-ethereum team is hiring a staff software engineer to help ~accelerate~ Ethereum! If you have experience working in… Re-upping my article from 2021 addressing this, and some possible solutions:
+
+https://t.co/nEc5VWj34s
+
+@_futarchy is one example of category 3 (skin in the game for governance). There's still a bribeable governance layer for the utility function, but at least it's more indirect so you can't just go and pay dollars to achieve a specific outcome.
+
+Bribe mechanisms are going to happen, you can't stop them on an open system - and so we need to design our governance to be maximally robust to them. RT @eth_proofs: Announcing https://t.co/60HiBESi0g to boost Ethereum SNARKification!
+
+Ethproofs is the L2beat of zkVMs—launching today with… One of the many things that we need to acceeeeeeelerate is abolishing groth16
+
+Per-application trusted setups are just not ok in the 2020s. Universal setup at the minimum, ideally no setup at all
+
+This requires big improvements on infra and standardization for newer SNARK algos RT @gakonst: ETHEREUM ACCELERATION .
+
+With @matthuang, @danrobinson &amp; @_charlienoyes. https://t.co/5TJq3G7HhX RT @CharlotteFang77: milady https://t.co/CUTQ13DZay
+
+RT @sgoldfed: Fantastic post which completely changed my thinking on native rollups.
+
+There's an inherent tension in Ethereum between the f… gm https://t.co/3w3uX9wgpJ We could give up on L2s and try to do 2016-era-style L1 sharding. But this would be a mistake.
+
+Instead, we should double down on our work on interoperability, ZK-EVMs, etc, and get the benefits of independent innovation and a unified Ethereum at the same time.
+
+This means: Summary: raise the blobs, work hard on interop and security, think about economics. See the post for more details on each topic.
+
+Ethereum's future is bright.
+

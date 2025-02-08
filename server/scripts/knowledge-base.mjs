@@ -12,7 +12,7 @@ config({
 });
 
 // to be edited
-const list = ["VitalikButerin", "BenArmstrongsX", "punk6529"];
+const list = ["VitalikButerin"]; //, "BenArmstrongsX", "punk6529"];
 
 const twitterCookiesPath = join(__dirname, "..", "..", "twitter-cookies.json");
 
@@ -21,6 +21,41 @@ const endpointUrl = "https://api.twitter.com/2/tweets/search/recent";
 
 async function getLastTweets() {
   const response = await getRequest();
+}
+
+function groupTweets(tweets, maxWords = 200) {
+  let currentChunk = "";
+  const chunks = [];
+
+  tweets.forEach((tweet) => {
+    const text = tweet.text.trim();
+    if (!text) return;
+
+    // Vérifier si le tweet dépasse la limite de mots
+    if (text.split(" ").length > maxWords) {
+      console.log(`Tweet ignoré (trop long) : ${text.substring(0, 50)}...`);
+      return; // Ignorer le tweet si il dépasse la limite de mots
+    }
+
+    const currentChunkWordCount = currentChunk.split(" ").length;
+    const tweetWordCount = text.split(" ").length;
+
+    // Si ajouter ce tweet dépasse la limite, on sauvegarde le chunk actuel et on commence un nouveau
+    if (currentChunkWordCount + tweetWordCount > maxWords) {
+      chunks.push(currentChunk.trim());
+      currentChunk = "";
+    }
+
+    // Ajouter le tweet au chunk courant
+    currentChunk += " " + text;
+  });
+
+  // Ajouter le dernier chunk s'il y en a un
+  if (currentChunk.trim()) {
+    chunks.push(currentChunk.trim());
+  }
+
+  return chunks;
 }
 
 async function getRequest() {
@@ -36,13 +71,21 @@ async function getRequest() {
     }
     const me = await scraper.me();
     console.log(me);
+
+    const allTweets = [];
+
     for (const influencer of list) {
-      const tweets = await scraper.getTweets(influencer, 100);
+      const tweets = await scraper.getTweets(influencer, 30);
       for await (const tweet of tweets) {
-        if (tweet.text) console.log("item", tweet.text);
-        fs.appendFile("./tweets.txt", tweet.text + "\n");
+        if (tweet.text) allTweets.push(tweet);
       }
     }
+
+    const tweetChunks = groupTweets(allTweets);
+
+    tweetChunks.forEach((chunk) => {
+      fs.appendFile("./tweets.txt", chunk + "\n\n");
+    });
   } catch (error) {
     console.log(error);
   }
